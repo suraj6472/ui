@@ -1,14 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu</title>
-    <link rel="stylesheet" href="/css/app.css" />
+    <!-- 2. Minify external css and javascript -->
+    <!-- 3. Place all external css files in head tag -->
+    <link rel="stylesheet" href="/css/app.css">
   </head>
   <body>
-    <div class="main-content">Body comes here.</div>
+    <div class="main-content">
+      <!-- 1. Use only one <h1> element in one single HTML page for better SEO purpose -->
+      <h1>HTML Best Practices</h1>
+      <!-- Best Practices -->
+      <!-- Example One: Displaying image caption -->
+      <!-- Bad Code -->
+      <div>
+        <img
+          src="https://images.pexels.com/photos/4040649/pexels-photo-4040649.jpeg"
+          alt=""
+          width="320"
+          height="240"
+       >
+        <p>This is image.</p>
+      </div>
+      <!-- End Bad Code -->
+      <!-- Good Code -->
+      <figure>
+        <img
+          src="https://images.pexels.com/photos/4040649/pexels-photo-4040649.jpeg"
+          alt=""
+          width="320"
+          height="240"
+       >
+        <figcaption>This is image.</figcaption>
+      </figure>
+      <!-- End Good Code -->
+
+      <!-- Example Two: use of <b> and <i> -->
+      <!-- Bad Code -->
+      <p><i>Some text here</i></p>
+      <p><b>Some text here</b></p>
+      <!-- END Bad Code -->
+
+      <!-- Good Code -->
+      <p><em>Some text here</em></p>
+      <p><strong>Some text here</strong></p>
+      <!-- END Good Code -->
+
+      <!-- Example Three: Symentic Elements (tags itself convey their meaning) -->
+      <!-- Bad Code -->
+
+      <div class="header">
+        <div class="logo"></div>
+        <div class="menu"></div>
+      </div>
+      <div class="footer">
+        <p>Copyright Text</p>
+      </div>
+
+      <!-- END Bad Code -->
+
+      <!-- Good Code -->
+      <header>
+        <div class="logo"></div>
+        <nav></nav>
+      </header>
+      <footer>
+        <p>Copyright Text</p>
+      </footer>
+      <!-- END Good Code -->
+    </div>
+
     <footer>Footer comes here</footer>
+    <!-- 4. javascript should be at the bottom of the page -->
+    <!-- 5. validate your code w3c validator: https://validator.w3.org/ -->
+    <!-- 6. check browser support for modern feature -->
   </body>
 </html>
